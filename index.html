@@ -3,57 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔐 VPN Подписка</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
-               text-align: center; padding: 40px 20px; background: #f5f5f7; }
-        .card { background: white; padding: 30px; border-radius: 16px; 
-                max-width: 400px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; background: #6C5CE7; color: white; 
-               padding: 14px 28px; text-decoration: none; border-radius: 10px; 
-               font-weight: 600; margin: 10px 0; }
-        .btn:hover { background: #5B4CD4; }
-        .info { color: #666; font-size: 14px; margin-top: 20px; }
-        code { background: #f0f0f0; padding: 3px 6px; border-radius: 4px; }
-    </style>
-    <script>
-        const SUB_URL = "https://gist.githubusercontent.com/Lertrex/e8c1faa24222b84941821cd51c100f68/raw/df4f35700d86f897d6a0bb4295ca43c872c675b0/subscription.txt";
-        const BASE64_URL = btoa(SUB_URL);
-        const DEEP_LINK = `happ://import-subscription?url=${BASE64_URL}`;
-        
-        // Попытка открыть Happ
-        window.location.href = DEEP_LINK;
-        
-        // Если не сработало — показать интерфейс
-        setTimeout(() => {
-            document.getElementById('fallback').style.display = 'block';
-        }, 1500);
-    </script>
+    <title>Lertex</title>
 </head>
 <body>
-    <div class="card">
-        <h1>🔐 VPN Подписка</h1>
-        <p>Открываю Happ Proxy...</p>
-        
-        <div id="fallback" style="display:none">
-            <p style="color:#666">Если приложение не открылось:</p>
-            
-            <a href="happ://import-subscription?url=aHR0cHM6Ly9naXN0LmdpdGh1YnVzZXJjb250ZW50LmNvbS9MZXJ0cmV4L2U4YzFmYWEyNDIyMmI4NDk0MTgyMWNkNTFjMTAwZjY4L3Jhdy9kZjRmMzU3MDBkODZmODk3ZDZhMGJiNDI5NWNhNDNjODcyYzY3NWIwL3N1YnNjcmlwdGlvbi50eHQ=" 
-               class="btn">🔄 Попробовать снова</a>
-            
-            <br>
-            <a href="https://play.google.com/store/apps/details?id=com.happproxy" 
-               class="btn" style="background:#34C759">📥 Скачать Happ Proxy</a>
-            
-            <p class="info">
-                Или скопируйте ссылку вручную:<br>
-                <code id="subLink"></code>
-            </p>
-            
-            <script>
-                document.getElementById('subLink').textContent = SUB_URL;
-            </script>
-        </div>
-    </div>
+    
 </body>
 </html>
